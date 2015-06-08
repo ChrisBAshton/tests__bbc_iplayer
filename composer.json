@@ -1,0 +1,14 @@
+{
+    "name": "ChrisBAshton/tests__bbc_iplayer",
+    "description": "This project was developed as part of a recruitment test for BBC iPlayer.",
+    "require": {
+        "php":             ">=5.3.6",
+        "bcosca/fatfree":  "3.4.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.6.*"
+    },
+    "config": {
+        "vendor-dir": "vendor"
+    }
+}

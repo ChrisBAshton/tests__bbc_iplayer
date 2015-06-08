@@ -1,0 +1,19 @@
+header {
+    padding: 1em 3em 3em;
+}
+
+.letters {
+    display: inline;
+}
+
+.letters__letter {
+    display: inline-block;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    margin-top: 50px;
+}

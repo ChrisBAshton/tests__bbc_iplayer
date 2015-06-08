@@ -1,0 +1,26 @@
+<h1>Programmes beginning with "<?php echo $letter; ?>"</h1>
+
+<p><em><?php echo $feed->count; ?> results found.</em></p>
+
+<?php foreach($feed->elements as $element) : ?>
+
+    <div class="row" id="<?php echo $element->id; ?>">
+        <h3><?php echo $element->title; ?></h3>
+        <p>&lt;img src="<?php echo $element->images->standard; ?>" alt="Image for <?php echo $element->title; ?>" /&gt;</p>
+        <p><?php echo $element->synopses->medium; ?></p>
+    </div>
+
+<?php endforeach; ?>
+
+<div class="row">
+    <div class="col-sm-6 text-left">
+        <?php if ($showPrev): ?>
+            <a href="/letters/<?php echo $letter; ?>/<?php echo $pageNumber - 1; ?>">Previous</a>
+        <?php endif; ?>
+    </div>
+    <div class="col-sm-6 text-right">
+        <?php if ($showNext): ?>
+            <a href="/letters/<?php echo $letter; ?>/<?php echo $pageNumber + 1; ?>">Next</a>
+        <?php endif; ?>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>BBC iPlayer Test</title>
+        <link rel="stylesheet" href="/view/css/bootstrap.css">
+        <link rel="stylesheet" href="/view/css/style.css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="content">
+                <header class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <a href="/">Home</a>
+
+                            <ul class="letters">
+                                <?php
+                                $letters = array_merge(range('a', 'z'), range('0', '9'));
+                                foreach ($letters as $letter) :
+                                ?>
+                                    <li class="letters__letter">
+                                        <a href="/letters/<?php echo $letter; ?>"><?php echo $letter; ?></a>
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="container">
+                    <?php echo $this->render(Base::instance()->get('content')); ?>
+                </div>
+            </div>
+
+            <footer>
+               This project was developed as part of a recruitment test for BBC iPlayer.
+            </footer>
+        </div>
+    </body>
+</html>
